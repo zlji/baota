@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  baota6:
+    image: ruiban/baota6:base
+    privileged: true
+    container_name: baota6
+    restart: always
+    tty: true
+    ports:
+      - 80:80
+      - 443:443
+      - 8888:8888
+    volumes:
+      - ./www:/www/wwwroot
+    networks:
+      - baota6
+networks:
+  baota6:
+    driver: bridge
