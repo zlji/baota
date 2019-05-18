@@ -14,7 +14,8 @@ services:
       - 3306:3306
       - 8888:8888
     volumes:
-      - ./www:/www
+      - ./www/wwwroot:/www/wwwroot
+      - ./www/backup:/www/backup
     networks:
       - baota6
 networks:
